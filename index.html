@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncle Tee Car Care - Professional Mobile Car Wash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/web icon.png">
+</head>
+<body>
+    <!-- Add this right after <body> tag -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="car-wash-animation">
+                <i class="fas fa-car-side"></i>
+                <div class="water-drops">
+                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-tint"></i>
+                </div>
+            </div>
+            <p>Loading your experience...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home">
+                <img src="images/web icon.png" alt="Uncle Tee Car Care" class="logo-img">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#booking">Book a Wash</a>
+            <a href="#calculator">Cost Calculator</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Car Wash Delivered to You</h1>
+            <p>Experience the convenience of premium car care at your doorstep</p>
+            <a href="#booking" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <h2>Who We Are</h2>
+                    <p>We are Uncle Tee Car Care, your trusted mobile car wash professionals bringing premium car care services directly to your location.</p>
+                </div>
+                <div class="about-card">
+                    <h2>What We Do</h2>
+                    <p>We provide comprehensive car washing and detailing services, from express washes to premium valets, all at your convenience.</p>
+                </div>
+                <div class="about-card">
+                    <h2>Why It Matters</h2>
+                    <p>Save time and maintain your vehicle's value with our professional service that comes to you, ensuring your car always looks its best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Packages</h2>
+                <p>Choose the perfect package for your vehicle</p>
+            </div>
+            <div class="package-grid">
+                <!-- Express Wash Package -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-image">
+                            <img src="https://images.pexels.com/photos/6873086/pexels-photo-6873086.jpeg" alt="Express Wash">
+                        </div>
+                        <div class="package-name">
+                            <h3>Express Wash</h3>
+                            <span class="duration">45 mins</span>
+                        </div>
+                        <div class="package-pricing">
+                            <div class="price-tag">
+                                <span class="price-small">Small - $80</span>
+                                <span class="price-big">Big - $100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-spray-can"></i>Snow foam car wash</li>
+                            <li><i class="fas fa-hand-sparkles"></i>Hand wash and car body dried</li>
+                            <li><i class="fas fa-car"></i>Wheels cleaned and shined</li>
+                            <li><i class="fas fa-window-maximize"></i>Windows cleaned</li>
+                            <li><i class="fas fa-vacuum-cleaner"></i>Inside and boot vacuumed</li>
+                        </ul>
+                    </div>
+                    <button class="book-button">
+                        <span>Book Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Mini Valet Package -->
+                <div class="package-card popular">
+                    <div class="package-header">
+                        <div class="package-image">
+                            <img src="https://images.pexels.com/photos/6873091/pexels-photo-6873091.jpeg" alt="Mini Valet">
+                        </div>
+                        <div class="package-name">
+                            <h3>Mini Valet</h3>
+                            <span class="duration">1-1.5 hours</span>
+                        </div>
+                        <div class="package-pricing">
+                            <div class="price-tag">
+                                <span class="price-small">Small - $120</span>
+                                <span class="price-big">Big - $140</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Express wash package included</li>
+                            <li><i class="fas fa-hand-sparkles"></i>Full car hand polish</li>
+                            <li><i class="fas fa-clock"></i>Professional detailing</li>
+                        </ul>
+                    </div>
+                    <button class="book-button">
+                        <span>Book Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Prestige Valet Package -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-image">
+                            <img src="https://images.pexels.com/photos/6873089/pexels-photo-6873089.jpeg" alt="Prestige Valet">
+                        </div>
+                        <div class="package-name">
+                            <h3>Prestige Valet</h3>
+                            <span class="duration">1.5-2 hours</span>
+                        </div>
+                        <div class="package-pricing">
+                            <div class="price-tag">
+                                <span class="price-small">Small - $200</span>
+                                <span class="price-big">Big - $230</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-spray-can"></i>Snow foam and body hand wash</li>
+                            <li><i class="fas fa-car"></i>Tyre cleaned and shined</li>
+                            <li><i class="fas fa-window-maximize"></i>Window cleaned and shined</li>
+                            <li><i class="fas fa-hand-sparkles"></i>Body dried and polished</li>
+                            <li><i class="fas fa-couch"></i>Interior deep clean</li>
+                            <li><i class="fas fa-broom"></i>Stain removal</li>
+                            <li><i class="fas fa-vacuum-cleaner"></i>Deep carpet cleaning</li>
+                        </ul>
+                    </div>
+                    <button class="book-button">
+                        <span>Book Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Book a Wash</h2>
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="service">Select Package</label>
+                        <select id="service" required>
+                            <option value="">Choose a package</option>
+                            <option value="express-small">Express Wash - Small</option>
+                            <option value="express-big">Express Wash - Big</option>
+                            <option value="mini-small">Mini Valet - Small</option>
+                            <option value="mini-big">Mini Valet - Big</option>
+                            <option value="prestige-small">Prestige Valet - Small</option>
+                            <option value="prestige-big">Prestige Valet - Big</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="car-details">Car Details</label>
+                        <input type="text" id="car-details" placeholder="Make, Model, Year" required>
+                    </div>
+                    <button type="submit" class="submit-button">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> uncletee.carcar@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 0274951329</p>
+                    <div class="social-links">
+                        <a href="https://tiktok.com/@uncletee_carcare" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://instagram.com/uncletee_carcare" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Car Details (Make, Model, Year)" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Uncle Tee Car Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
