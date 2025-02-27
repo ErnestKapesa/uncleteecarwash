@@ -77,26 +77,27 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Hero Section - Updated with lighter overlay */
 .hero {
     min-height: 100vh;
     padding-top: 100px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.pexels.com/photos/6873086/pexels-photo-6873086.jpeg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), /* Lighter overlay */
+                url('images/background_image.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
+/* Enhanced hero content for better visibility */
 .hero-content {
     max-width: 900px;
     width: 90%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4); /* Lighter background */
+    backdrop-filter: blur(8px);
     padding: 4rem;
     border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     margin: 2rem;
 }
 
@@ -105,7 +106,7 @@ body {
     color: var(--white);
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Lighter text shadow */
     font-weight: 700;
 }
 
@@ -113,7 +114,7 @@ body {
     color: var(--white);
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Lighter text shadow */
 }
 
 .cta-button {
@@ -188,9 +189,10 @@ body {
 }
 
 .package-image {
-    height: 200px;
+    height: 250px;
     overflow: hidden;
     position: relative;
+    border-bottom: 3px solid var(--blue);
 }
 
 .package-image img {
@@ -201,7 +203,7 @@ body {
 }
 
 .package-card:hover .package-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .package-name {
@@ -494,7 +496,7 @@ footer {
     }
     
     .package-image {
-        height: 180px;
+        height: 200px;
     }
     
     .package-features {
@@ -702,4 +704,259 @@ img:hover {
 /* Section Spacing */
 section {
     padding: 6rem 0;
+}
+
+/* Service Highlights Section */
+.service-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.highlight-image {
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.highlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.highlight-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for images */
+@media (max-width: 768px) {
+    .package-image {
+        height: 200px;
+    }
+    
+    .service-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .package-image {
+        height: 180px;
+    }
+    
+    .highlight-image {
+        height: 200px;
+    }
+}
+
+/* Catchphrase Section */
+.catchphrase {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--blue) 0%, #5a8a9d 100%);
+    color: white;
+    text-align: center;
+}
+
+.catchphrase-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.catchphrase h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.catchphrase h3 {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.divider {
+    width: 100px;
+    height: 4px;
+    background: white;
+    margin: 2rem auto;
+    border-radius: 2px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 8rem 0;
+    background: #f8f9fa;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(115, 160, 179, 0.2);
+}
+
+.testimonial-content {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testimonial-content i {
+    color: var(--blue);
+    font-size: 2rem;
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.testimonial-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 1.5rem;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    color: var(--black);
+    margin-bottom: 0.2rem;
+}
+
+.author-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.rating {
+    margin-top: 0.5rem;
+}
+
+.rating i {
+    color: #ffd700;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .catchphrase h2 {
+        font-size: 2.5rem;
+    }
+
+    .catchphrase h3 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .catchphrase h2 {
+        font-size: 2rem;
+    }
+
+    .catchphrase h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    border-left: 4px solid #4CAF50;
+}
+
+.notification.error {
+    border-left: 4px solid #f44336;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification i {
+    font-size: 1.5rem;
+}
+
+.notification.success i {
+    color: #4CAF50;
+}
+
+.notification.error i {
+    color: #f44336;
+}
+
+/* Form Validation Styles */
+.input-error {
+    border-color: #f44336 !important;
+}
+
+.error-message {
+    color: #f44336;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
 }

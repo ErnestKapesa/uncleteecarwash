@@ -56,21 +56,86 @@
         </div>
     </section>
 
-    <!-- Who We Are Section -->
-    <section id="about" class="about">
+    <!-- Replace the About Section with Catchy Theme -->
+    <section id="catchphrase" class="catchphrase">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-card">
-                    <h2>Who We Are</h2>
-                    <p>We are Uncle Tee Car Care, your trusted mobile car wash professionals bringing premium car care services directly to your location.</p>
+            <div class="catchphrase-content">
+                <h2>Too Busy for a Car Wash?</h2>
+                <h3>Relax, We've Got the Dirt Covered!</h3>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Real experiences from satisfied customers</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Absolutely amazing service! They came to my office and transformed my car while I was in meetings. Couldn't be more convenient!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/car_d.jpg" alt="Customer Car">
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Business Executive</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <h2>What We Do</h2>
-                    <p>We provide comprehensive car washing and detailing services, from express washes to premium valets, all at your convenience.</p>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The attention to detail is incredible. My car hasn't looked this good since I bought it. These guys are true professionals!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/car_b.jpg" alt="Customer Car">
+                        <div class="author-info">
+                            <h4>James Wilson</h4>
+                            <p>Car Enthusiast</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <h2>Why It Matters</h2>
-                    <p>Save time and maintain your vehicle's value with our professional service that comes to you, ensuring your car always looks its best.</p>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Regular customer here! The convenience of having them come to my home is unbeatable. Always consistent, always professional."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/car_c.jpg" alt="Customer Car">
+                        <div class="author-info">
+                            <h4>Emma Thompson</h4>
+                            <p>Busy Parent</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,7 +153,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <div class="package-image">
-                            <img src="https://images.pexels.com/photos/6873086/pexels-photo-6873086.jpeg" alt="Express Wash">
+                            <img src="images/car_a.jpg" alt="Express Wash" loading="lazy">
                         </div>
                         <div class="package-name">
                             <h3>Express Wash</h3>
@@ -120,7 +185,7 @@
                 <div class="package-card popular">
                     <div class="package-header">
                         <div class="package-image">
-                            <img src="https://images.pexels.com/photos/6873091/pexels-photo-6873091.jpeg" alt="Mini Valet">
+                            <img src="images/car_b.jpg" alt="Mini Valet" loading="lazy">
                         </div>
                         <div class="package-name">
                             <h3>Mini Valet</h3>
@@ -150,7 +215,7 @@
                 <div class="package-card">
                     <div class="package-header">
                         <div class="package-image">
-                            <img src="https://images.pexels.com/photos/6873089/pexels-photo-6873089.jpeg" alt="Prestige Valet">
+                            <img src="images/car_c.jpg" alt="Prestige Valet" loading="lazy">
                         </div>
                         <div class="package-name">
                             <h3>Prestige Valet</h3>
@@ -213,6 +278,18 @@
                         <label for="car-details">Car Details</label>
                         <input type="text" id="car-details" placeholder="Make, Model, Year" required>
                     </div>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
                     <button type="submit" class="submit-button">Book Now</button>
                 </form>
             </div>
@@ -263,5 +340,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
