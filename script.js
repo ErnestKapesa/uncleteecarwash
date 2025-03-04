@@ -42,9 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// EmailJS initialization
-emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-
 // Booking Form Handler
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -67,16 +64,22 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     };
 
     // Send email using EmailJS
-    emailjs.send('service_id', 'template_id', { // Replace with your service and template IDs
-        to_email: 'uncletee.carcar@gmail.com',
-        from_name: formData.name,
-        service: formData.service,
-        date: formData.date,
-        time: formData.time,
-        car_details: formData.carDetails,
-        contact_email: formData.email,
-        contact_phone: formData.phone
-    })
+    emailjs.send(
+        // TODO: Replace these with your actual EmailJS service and template IDs
+        // Get them from: https://dashboard.emailjs.com/admin
+        'service_id', // Your EmailJS service ID
+        'template_id', // Your EmailJS template ID
+        {
+            to_email: 'uncletee.carcar@gmail.com',
+            from_name: formData.name,
+            service: formData.service,
+            date: formData.date,
+            time: formData.time,
+            car_details: formData.carDetails,
+            contact_email: formData.email,
+            contact_phone: formData.phone
+        }
+    )
     .then(function() {
         // Show success message
         showNotification('Booking submitted successfully! We will contact you shortly.', 'success');
