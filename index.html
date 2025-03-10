@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uncle Tee Car Care - Professional Mobile Car Wash</title>
+    <title>Uncle Tee Car Care - Premium Auto Detailing Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/web icon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <a href="#home">
+            <a href="#home" class="animate-logo">
                 <img src="images/web icon.png" alt="Uncle Tee Car Care" class="logo-img">
             </a>
         </div>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#packages">Packages</a>
-            <a href="#booking">Book a Wash</a>
-            <a href="#calculator">Cost Calculator</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#packages" class="nav-item">Services</a>
+            <a href="#booking" class="nav-item">Book Now</a>
+            <a href="#gallery" class="nav-item">Gallery</a>
+            <a href="#reviews" class="nav-item">Reviews</a>
+            <a href="#contact" class="nav-item">Contact</a>
         </div>
         <div class="hamburger">
             <span></span>
@@ -34,19 +35,86 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Professional Car Wash Delivered to You</h1>
-            <p>Experience the convenience of premium car care at your doorstep</p>
-            <a href="#booking" class="cta-button">Book Now</a>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="animate-text">Luxury Auto Detailing Excellence</h1>
+            <p class="animate-text-delay">Experience the pinnacle of automotive care with our premium detailing services</p>
+            <a href="#booking" class="cta-button animate-button">Transform Your Vehicle</a>
         </div>
     </section>
 
-    <!-- Replace the About Section with Catchy Theme -->
+    <!-- Video Showcase Section -->
+    <section id="video-showcase" class="video-showcase">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Work in Action</h2>
+                <p>Watch our professional car care service transform vehicles</p>
+            </div>
+            <div class="video-grid" data-aos="fade-up" data-aos-delay="200">
+                <!-- Video Grid Row 1 -->
+                <div class="video-item" data-aos="zoom-in" data-aos-delay="300">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//0031e6db-a539-4e01-bc93-19b7bb958f39.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item" data-aos="zoom-in" data-aos-delay="400">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//1279bc51-cc28-4e99-9205-bc1a4c15f6a9.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item" data-aos="zoom-in" data-aos-delay="500">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//181a1254-742c-4fd5-ba10-55060378be82.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Video Grid Row 2 -->
+                <div class="video-item" data-aos="zoom-in" data-aos-delay="600">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//1abf6a30-fe0d-4e3a-83e3-a78a78ea5414.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item featured-video" data-aos="zoom-in" data-aos-delay="700">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//265bc949-49d1-4286-8919-4cfabc40757c.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item" data-aos="zoom-in" data-aos-delay="800">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//2babd55b-ed61-4ad6-a6f9-755ea9c8b387.MP4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-grid-small">
+                <!-- Additional Videos Row -->
+                <div class="video-item small" data-aos="zoom-in" data-aos-delay="900">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//333ed5c6-f6e6-4a1e-b5ae-3b0e14d0a515.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item small" data-aos="zoom-in" data-aos-delay="1000">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//35a3558f-06bb-49e4-a367-0f5208e77fe1.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item small" data-aos="zoom-in" data-aos-delay="1100">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//4bf3c296-3795-4899-b647-6097fde2af8f.MP4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-item small" data-aos="zoom-in" data-aos-delay="1200">
+                    <video autoplay muted loop playsinline>
+                        <source src="https://nejkmctbvlkkgngjtdiz.supabase.co/storage/v1/object/public/malazi_images//51f36c5b-404f-4880-b046-28c781db04ae.MP4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catchphrase Section -->
     <section id="catchphrase" class="catchphrase">
         <div class="container">
             <div class="catchphrase-content">
-                <h2>Too Busy for a Car Wash?</h2>
-                <h3>Relax, We've Got the Dirt Covered!</h3>
+                <h2>Elevate Your Vehicle's Presence</h2>
+                <h3>Where Perfection Meets Passion in Every Detail</h3>
                 <div class="divider"></div>
             </div>
         </div>
@@ -56,20 +124,19 @@
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Customers Say</h2>
-                <p>Real experiences from satisfied customers</p>
+                <h2>Client Experiences</h2>
+                <p>What our valued clients say about our detailing services</p>
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>"Absolutely amazing service! They came to my office and transformed my car while I was in meetings. Couldn't be more convenient!"</p>
+                        <p>"Uncle Tee's attention to detail is exceptional! My Audi looks better than when I first bought it. The ceramic coating they applied has made maintenance so much easier. Highly recommend their premium detailing services!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/car_d.jpg" alt="Customer Car">
                         <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <p>Business Executive</p>
+                            <h4>Annette</h4>
+                            <p>Luxury Car Enthusiast</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -87,7 +154,6 @@
                         <p>"The attention to detail is incredible. My car hasn't looked this good since I bought it. These guys are true professionals!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/car_b.jpg" alt="Customer Car">
                         <div class="author-info">
                             <h4>James Wilson</h4>
                             <p>Car Enthusiast</p>
@@ -108,7 +174,6 @@
                         <p>"Regular customer here! The convenience of having them come to my home is unbeatable. Always consistent, always professional."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/car_c.jpg" alt="Customer Car">
                         <div class="author-info">
                             <h4>Emma Thompson</h4>
                             <p>Busy Parent</p>
@@ -130,11 +195,11 @@
     <section id="packages" class="packages">
         <div class="container">
             <div class="section-title">
-                <h2>Our Packages</h2>
-                <p>Choose the perfect package for your vehicle</p>
+                <h2>Premium Detailing Services</h2>
+                <p>Choose excellence for your luxury vehicle</p>
             </div>
             <div class="package-grid">
-                <!-- Express Wash Package -->
+                <!-- Express Wash -->
                 <div class="package-card">
                     <div class="package-header">
                         <div class="package-image">
@@ -142,22 +207,23 @@
                         </div>
                         <div class="package-name">
                             <h3>Express Wash</h3>
-                            <span class="duration">45 mins</span>
+                            <span class="duration">1 hour</span>
                         </div>
                         <div class="package-pricing">
                             <div class="price-tag">
                                 <span class="price-small">Small - $80</span>
-                                <span class="price-big">Big - $100</span>
+                                <span class="price-big">Large - $100</span>
                             </div>
                         </div>
                     </div>
                     <div class="package-features">
                         <ul>
-                            <li><i class="fas fa-spray-can"></i>Snow foam car wash</li>
-                            <li><i class="fas fa-hand-sparkles"></i>Hand wash and car body dried</li>
-                            <li><i class="fas fa-car"></i>Wheels cleaned and shined</li>
-                            <li><i class="fas fa-window-maximize"></i>Windows cleaned</li>
-                            <li><i class="fas fa-vacuum-cleaner"></i>Inside and boot vacuumed</li>
+                            <li><i class="fas fa-check-circle"></i>Exterior Hand Wash</li>
+                            <li><i class="fas fa-check-circle"></i>Interior Vacuuming</li>
+                            <li><i class="fas fa-check-circle"></i>Door Panel Wipe-down</li>
+                            <li><i class="fas fa-check-circle"></i>Tire Shine</li>
+                            <li><i class="fas fa-check-circle"></i>Quick Service</li>
+                            <li><i class="fas fa-check-circle"></i>Perfect for Busy Schedules</li>
                         </ul>
                     </div>
                     <button class="book-button">
@@ -166,28 +232,31 @@
                     </button>
                 </div>
 
-                <!-- Mini Valet Package -->
-                <div class="package-card popular">
+                <!-- Mini Valet -->
+                <div class="package-card">
                     <div class="package-header">
                         <div class="package-image">
                             <img src="images/car_b.jpg" alt="Mini Valet" loading="lazy">
                         </div>
                         <div class="package-name">
                             <h3>Mini Valet</h3>
-                            <span class="duration">1-1.5 hours</span>
+                            <span class="duration">1.5-2 hours</span>
                         </div>
                         <div class="package-pricing">
                             <div class="price-tag">
                                 <span class="price-small">Small - $120</span>
-                                <span class="price-big">Big - $140</span>
+                                <span class="price-big">Large - $140</span>
                             </div>
                         </div>
                     </div>
                     <div class="package-features">
                         <ul>
-                            <li><i class="fas fa-check-circle"></i>Express wash package included</li>
-                            <li><i class="fas fa-hand-sparkles"></i>Full car hand polish</li>
-                            <li><i class="fas fa-clock"></i>Professional detailing</li>
+                            <li><i class="fas fa-check-circle"></i>Express Wash Package +</li>
+                            <li><i class="fas fa-check-circle"></i>Exterior Hand Polish</li>
+                            <li><i class="fas fa-check-circle"></i>Interior Hand Polish</li>
+                            <li><i class="fas fa-check-circle"></i>Enhanced Shine</li>
+                            <li><i class="fas fa-check-circle"></i>Detailed Attention</li>
+                            <li><i class="fas fa-check-circle"></i>Time-Efficient Service</li>
                         </ul>
                     </div>
                     <button class="book-button">
@@ -196,32 +265,66 @@
                     </button>
                 </div>
 
-                <!-- Prestige Valet Package -->
-                <div class="package-card">
+                <!-- Prestige Valet -->
+                <div class="package-card popular">
                     <div class="package-header">
                         <div class="package-image">
                             <img src="images/car_c.jpg" alt="Prestige Valet" loading="lazy">
                         </div>
                         <div class="package-name">
                             <h3>Prestige Valet</h3>
-                            <span class="duration">1.5-2 hours</span>
+                            <span class="duration">2-3 hours</span>
                         </div>
                         <div class="package-pricing">
                             <div class="price-tag">
                                 <span class="price-small">Small - $200</span>
-                                <span class="price-big">Big - $230</span>
+                                <span class="price-big">Large - $230</span>
                             </div>
                         </div>
                     </div>
                     <div class="package-features">
                         <ul>
-                            <li><i class="fas fa-spray-can"></i>Snow foam and body hand wash</li>
-                            <li><i class="fas fa-car"></i>Tyre cleaned and shined</li>
-                            <li><i class="fas fa-window-maximize"></i>Window cleaned and shined</li>
-                            <li><i class="fas fa-hand-sparkles"></i>Body dried and polished</li>
-                            <li><i class="fas fa-couch"></i>Interior deep clean</li>
-                            <li><i class="fas fa-broom"></i>Stain removal</li>
-                            <li><i class="fas fa-vacuum-cleaner"></i>Deep carpet cleaning</li>
+                            <li><i class="fas fa-check-circle"></i>Snow Foam Exterior Wash</li>
+                            <li><i class="fas fa-check-circle"></i>Thorough Tire Cleaning</li>
+                            <li><i class="fas fa-check-circle"></i>Sparkling Window Treatment</li>
+                            <li><i class="fas fa-check-circle"></i>Detailed Interior Care</li>
+                            <li><i class="fas fa-check-circle"></i>Stain Removal</li>
+                            <li><i class="fas fa-check-circle"></i>Vent Cleaning</li>
+                            <li><i class="fas fa-check-circle"></i>Premium Service</li>
+                        </ul>
+                    </div>
+                    <button class="book-button">
+                        <span>Book Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Ultimate Valet -->
+                <div class="package-card">
+                    <div class="package-header">
+                        <div class="package-image">
+                            <img src="images/car_d.jpg" alt="Ultimate Valet" loading="lazy">
+                        </div>
+                        <div class="package-name">
+                            <h3>Ultimate Valet</h3>
+                            <span class="duration">3-4 hours</span>
+                        </div>
+                        <div class="package-pricing">
+                            <div class="price-tag">
+                                <span class="price-small">Small - $500</span>
+                                <span class="price-big">Large - $600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Prestige Valet Package +</li>
+                            <li><i class="fas fa-check-circle"></i>Steam Clean Interior</li>
+                            <li><i class="fas fa-check-circle"></i>Professional Machine Polish</li>
+                            <li><i class="fas fa-check-circle"></i>Showroom Shine</li>
+                            <li><i class="fas fa-check-circle"></i>Ultimate Protection</li>
+                            <li><i class="fas fa-check-circle"></i>Premium Service</li>
+                            <li><i class="fas fa-check-circle"></i>Complete Transformation</li>
                         </ul>
                     </div>
                     <button class="book-button">
@@ -324,14 +427,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function() {
-            // TODO: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
-            // Get it from: https://dashboard.emailjs.com/admin/account
-            emailjs.init('YOUR_PUBLIC_KEY');
-        })();
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
