@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 800,
         easing: 'ease-out',
-        once: false,
-        mirror: true,
+        once: true,
+        mirror: false,
         offset: 50
     });
 
@@ -79,26 +79,39 @@ document.addEventListener('DOMContentLoaded', () => {
         videoObserver.observe(item);
     });
 
-    // Performance optimization for videos
+    // Optimize video loading
     const videos = document.querySelectorAll('video');
-    videos.forEach(video => {
-        if (window.innerWidth <= 768) {
-            video.setAttribute('playsinline', '');
-            video.setAttribute('preload', 'none');
-        }
-
-        const videoObserver = new IntersectionObserver((entries) => {
+    
+    videos.forEach((video, index) => {
+        // Set animation delay
+        video.parentElement.style.setProperty('--delay', index * 0.2);
+        
+        // Optimize video playback
+        video.setAttribute('playsinline', '');
+        video.setAttribute('muted', '');
+        video.setAttribute('loop', '');
+        
+        // Start playing when in viewport
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     video.play().catch(() => {});
-                } else {
-                    video.pause();
+                    observer.unobserve(video);
                 }
             });
-        }, { threshold: 0.5 });
-
-        videoObserver.observe(video);
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
+        });
+        
+        observer.observe(video);
     });
+
+    // Optimize hero background video
+    const heroVideo = document.querySelector('.hero-background');
+    if (heroVideo) {
+        heroVideo.play().catch(() => {});
+    }
 
     // Initialize package card animations
     const packageCards = document.querySelectorAll('.package-card');
@@ -127,6 +140,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
     packageCards.forEach(card => {
         observer.observe(card);
+    });
+
+    // Handle video loading and animations
+    const videoItemsVideos = document.querySelectorAll('.video-item video');
+    
+    videoItemsVideos.forEach(video => {
+        // Add loading class
+        video.parentElement.classList.add('loading');
+        
+        // Handle successful video load
+        video.addEventListener('loadeddata', () => {
+            if (video.readyState >= 3) {
+                video.parentElement.classList.remove('loading');
+                video.parentElement.classList.add('loaded');
+                video.style.opacity = '1';
+            }
+        });
+
+        // Handle video play
+        video.addEventListener('play', () => {
+            video.parentElement.classList.add('playing');
+        });
+
+        // Handle video errors
+        video.addEventListener('error', () => {
+            video.parentElement.classList.remove('loading');
+            video.parentElement.classList.add('error');
+            console.error('Video failed to load:', video.src);
+            
+            // Retry loading with MP4 format if not already
+            if (!video.src.toLowerCase().endsWith('.mp4')) {
+                const mp4Source = video.src.replace(/\.[^/.]+$/, '.mp4');
+                video.src = mp4Source;
+            }
+        });
+
+        // Force load check after timeout
+        setTimeout(() => {
+            if (video.readyState < 3) {
+                video.load();
+            }
+        }, 3000);
     });
 });
 
@@ -284,5 +339,77 @@ function validateForm(formId) {
 
     return isValid;
 }
+
+// Video loading handler
+function handleVideoLoading() {
+    const videos = document.querySelectorAll('.video-item video');
+    
+    videos.forEach(video => {
+        const container = video.parentElement;
+        container.classList.add('loading');
+
+        // Handle successful video load
+        video.addEventListener('loadeddata', function() {
+            container.classList.remove('loading');
+            container.classList.add('loaded');
+        });
+
+        // Handle video play
+        video.addEventListener('play', function() {
+            container.classList.remove('loading');
+            container.classList.add('loaded');
+        });
+
+        // Handle video error
+        video.addEventListener('error', function() {
+            console.error('Video failed to load:', video.querySelector('source').src);
+            container.classList.add('error');
+            
+            // Retry loading with MP4 format if it's not already MP4
+            const source = video.querySelector('source');
+            if (!source.src.endsWith('.MP4')) {
+                const newSrc = source.src.replace(/\.[^/.]+$/, '.MP4');
+                source.src = newSrc;
+                source.type = 'video/mp4';
+                video.load();
+            }
+        });
+
+        // Force load check
+        setTimeout(() => {
+            if (!container.classList.contains('loaded')) {
+                video.load();
+            }
+        }, 2000);
+    });
+}
+
+// Call the handler when DOM is ready
+document.addEventListener('DOMContentLoaded', handleVideoLoading);
+
+// Ensure proper grid layout
+function adjustGridLayout() {
+    const videoGrid = document.querySelector('.video-grid');
+    const videoGridSmall = document.querySelector('.video-grid-small');
+    
+    if (videoGrid && videoGridSmall) {
+        const items = videoGrid.querySelectorAll('.video-item:not(.error)');
+        const smallItems = videoGridSmall.querySelectorAll('.video-item:not(.error)');
+        
+        // Adjust main grid
+        if (items.length < 3) {
+            videoGrid.style.gridTemplateColumns = `repeat(${Math.max(items.length, 1)}, 1fr)`;
+        }
+        
+        // Adjust small grid
+        if (smallItems.length < 4) {
+            videoGridSmall.style.gridTemplateColumns = `repeat(${Math.max(smallItems.length, 1)}, 1fr)`;
+        }
+    }
+}
+
+// Run layout adjustment after videos load and on resize
+window.addEventListener('load', adjustGridLayout);
+window.addEventListener('resize', adjustGridLayout);
 
 // Rest of your existing JavaScript... 
