@@ -478,6 +478,23 @@ footer {
     text-align: center;
 }
 
+.designer-credit {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.designer-credit a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.designer-credit a:hover {
+    color: #E74C3C;
+    text-decoration: underline;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -1085,18 +1102,9 @@ section {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.video-grid-small {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    padding: 40px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -1104,7 +1112,7 @@ section {
 .video-item {
     position: relative;
     aspect-ratio: 16/9;
-    min-height: 220px;
+    min-height: 300px;
     background: #1a1f2c;
     border-radius: 12px;
     overflow: hidden;
@@ -1113,12 +1121,8 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     animation-delay: calc(var(--delay) * 0.1s);
-}
-
-.video-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: #00b4d8;
-    box-shadow: 0 20px 40px rgba(0, 180, 216, 0.2);
+    margin: 20px;
+    width: 100%;
 }
 
 .video-item video {
@@ -1131,17 +1135,16 @@ section {
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-.video-item.small {
-    aspect-ratio: 16/9;
-    min-height: 180px;
+/* Remove the featured-video class styles */
+.video-item.featured-video {
+    grid-column: span 1;
+    min-height: 300px;
+    margin: 20px;
 }
 
-.video-item.featured-video {
-    grid-row: span 1;
-    grid-column: span 1;
-    aspect-ratio: 16/9;
-    min-height: 220px;
-    border: 2px solid #00b4d8;
+/* Remove the small video grid styles */
+.video-grid-small {
+    display: none;
 }
 
 /* Enhanced Animations */
